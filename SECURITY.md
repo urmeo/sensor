@@ -6,7 +6,7 @@ Local Python scripts and a single-participant sample; no network service is prov
 
 ## Reporting
 
-Use a [private security advisory](https://github.com/urmeo/Sensor/security/advisories/new). Include the file path and a minimal synthetic reproduction. Keep participant responses, identifying details and consent documents out of public issues. Privacy reports will be reviewed with the data controller.
+Use a [private security advisory](https://github.com/urmeo/sensor/security/advisories/new). Include the file path and a minimal synthetic reproduction. Keep participant responses, identifying details and consent documents out of public issues. Privacy reports will be reviewed with the data controller.
 
 ## Supported version
 

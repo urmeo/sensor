@@ -9,7 +9,7 @@ import pandas as pd
 import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
-NOTEBOOKS = [ROOT / "analysis" / "explore_data.ipynb"]
+NOTEBOOKS = [ROOT / "notebooks" / "explore_data.ipynb"]
 
 
 def test_notebooks_present():

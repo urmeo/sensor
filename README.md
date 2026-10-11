@@ -25,39 +25,41 @@ flowchart LR
 | `eye_metrics` | 264 | Summaries |
 | `Psychometric_Test_Results` | 88 | Responses/timing |
 
-[Dictionary](data/DATA_DICTIONARY.md) · [Schema](datapackage.json) · [Notebook](analysis/explore_data.ipynb)
+[Dictionary](data/DATA_DICTIONARY.md) · [Schema](datapackage.json) · [Notebook](notebooks/explore_data.ipynb)
 
 ## Equipment
 
 <table>
 <tr>
-<td align="center" valign="top" width="33%"><img src="images/pupil-labs-core.jpg" width="180" alt="Pupil Labs Core"><br>Pupil Labs Core</td>
-<td align="center" valign="top" width="33%"><img src="images/tobii-pro-glasses-3.jpg" width="180" alt="Tobii Pro Glasses 3"><br>Tobii Pro Glasses 3</td>
-<td align="center" valign="top" width="33%"><img src="images/smi-eye-tracking.jpg" width="180" alt="SMI eye tracking"><br>SMI eye tracking</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/pupil-labs-core.jpg" width="180" alt="Pupil Labs Core"><br>Pupil Labs Core</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/tobii-pro-glasses-3.jpg" width="180" alt="Tobii Pro Glasses 3"><br>Tobii Pro Glasses 3</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/smi-eye-tracking.jpg" width="180" alt="SMI eye tracking"><br>SMI eye tracking</td>
 </tr>
 <tr>
-<td align="center" valign="top" width="33%"><img src="images/polar-h10.jpg" width="180" alt="Polar H10"><br>Polar H10</td>
-<td align="center" valign="top" width="33%"><img src="images/moofit-hw401.jpg" width="180" alt="Moofit HW401"><br>Moofit HW401</td>
-<td align="center" valign="top" width="33%"><img src="images/empatica-e4.jpg" width="180" alt="Empatica E4"><br>Empatica E4</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/polar-h10.jpg" width="180" alt="Polar H10"><br>Polar H10</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/moofit-hw401.jpg" width="180" alt="Moofit HW401"><br>Moofit HW401</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/empatica-e4.jpg" width="180" alt="Empatica E4"><br>Empatica E4</td>
 </tr>
 <tr>
-<td align="center" valign="top" width="33%"><img src="images/tea-captiv-t-sens-gsr.jpg" width="180" alt="TEA T-SENS GSR"><br>TEA T-SENS GSR</td>
-<td align="center" valign="top" width="33%"><img src="images/biopac-eda.jpg" width="180" alt="BIOPAC EDA"><br>BIOPAC EDA</td>
-<td align="center" valign="top" width="33%"><img src="images/axis-p1275.jpg" width="180" alt="AXIS P1275"><br>AXIS P1275</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/tea-captiv-t-sens-gsr.jpg" width="180" alt="TEA T-SENS GSR"><br>TEA T-SENS GSR</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/biopac-eda.jpg" width="180" alt="BIOPAC EDA"><br>BIOPAC EDA</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/axis-p1275.jpg" width="180" alt="AXIS P1275"><br>AXIS P1275</td>
 </tr>
 <tr>
-<td align="center" valign="top" width="33%"><img src="images/axis-p1245.jpg" width="180" alt="AXIS P1245"><br>AXIS P1245</td>
-<td align="center" valign="top" width="33%"><img src="images/optitrack-slim-x13.jpg" width="180" alt="OptiTrack Slim X13"><br>OptiTrack Slim X13</td>
-<td align="center" valign="top" width="33%"><img src="images/openface.jpg" width="180" alt="OpenFace"><br>OpenFace</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/axis-p1245.jpg" width="180" alt="AXIS P1245"><br>AXIS P1245</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/optitrack-slim-x13.jpg" width="180" alt="OptiTrack Slim X13"><br>OptiTrack Slim X13</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/openface.jpg" width="180" alt="OpenFace"><br>OpenFace</td>
 </tr>
 <tr>
-<td align="center" valign="top" width="33%"><img src="images/noldus-facereader.jpg" width="180" alt="Noldus FaceReader"><br>Noldus FaceReader</td>
+<td align="center" valign="top" width="33%"><img src="docs/images/noldus-facereader.jpg" width="180" alt="Noldus FaceReader"><br>Noldus FaceReader</td>
 </tr>
 </table>
 
-Channel mapping unverified. [Corrections](NOTICE.md#supported-corrections) · [Image credits](images/CREDITS.md)
+Channel mapping unverified. [Corrections](NOTICE.md#supported-corrections) · [Image credits](docs/images/CREDITS.md)
 
 ## Setup
+
+The notebook is in `notebooks/`; data commands are in `scripts/`. Reviews and equipment images are in `docs/`.
 
 ```bash
 python -m pip install -e .
@@ -83,4 +85,4 @@ Wheels require `--data-dir /path/to/data`. [Commands](CONTRIBUTING.md).
 
 Code: [MIT](LICENSE). Authored data/docs: [CC BY 4.0](LICENSE-DATA). Instrument/media rights remain; instrument redistribution permission unestablished.
 
-[Multimodal-Multisensor](https://github.com/urmeo/Multimodal-Multisensor) · [CalmSense](https://github.com/urmeo/CalmSense)
+[Multimodal-Multisensor](https://github.com/urmeo/multimodal-multisensor) · [CalmSense](https://github.com/urmeo/calm-sense)

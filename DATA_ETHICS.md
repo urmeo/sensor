@@ -26,7 +26,7 @@ Consent records and independent approval evidence are not included in the reposi
 
 Research and education are the stated consent purposes. [CC BY 4.0](LICENSE-DATA) permits copyright reuse, including commercial reuse, where the author holds the relevant rights; privacy and other permissions remain separate. It does not turn the consent statement into unrestricted data-processing permission. [CC's rights explanation](https://creativecommons.org/licenses/by/4.0/)
 
-Code is [MIT](LICENSE). Questionnaire wording/answer options and product images retain third-party rights; open redistribution permission for instrument content is unestablished. See [NOTICE](NOTICE.md) and [image credits](images/CREDITS.md).
+Code is [MIT](LICENSE). Questionnaire wording/answer options and product images retain third-party rights; open redistribution permission for instrument content is unestablished. See [NOTICE](NOTICE.md) and [image credits](docs/images/CREDITS.md).
 
 ## Contact
 

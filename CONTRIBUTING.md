@@ -20,7 +20,7 @@ Runtime only: `python -m pip install -e .`. If installing requirements files sep
 
 ```bash
 python -m pytest tests/ -q
-python -m pytest --nbmake --nbmake-timeout=600 analysis/explore_data.ipynb
+python -m pytest --nbmake --nbmake-timeout=600 notebooks/explore_data.ipynb
 ruff check .
 ruff format --check .
 mypy sensor_data.py scripts

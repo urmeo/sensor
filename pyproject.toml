@@ -27,8 +27,8 @@ dev = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/urmeo/Sensor"
-Repository = "https://github.com/urmeo/Sensor"
+Homepage = "https://github.com/urmeo/sensor"
+Repository = "https://github.com/urmeo/sensor"
 
 [tool.setuptools]
 py-modules = ["sensor_data"]

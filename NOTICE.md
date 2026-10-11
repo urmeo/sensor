@@ -9,7 +9,7 @@
 | Python, notebook code, tests | [MIT](LICENSE) |
 | Original observations and authored documentation | [CC BY 4.0](LICENSE-DATA), where the author holds rights |
 | Questionnaire wording and answer options | Instrument rights remain; open redistribution permission is unestablished |
-| Product images and trademarks | Respective owners; [image credits](images/CREDITS.md), excluded from the CC BY grant |
+| Product images and trademarks | Respective owners; [image credits](docs/images/CREDITS.md), excluded from the CC BY grant |
 
 [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) permits commercial copyright reuse and preserves separate privacy/personality rights. Research/education are the author's stated consent purposes in [DATA_ETHICS](DATA_ETHICS.md). The repository grants no instrument permission or endorsement.
 
