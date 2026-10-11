@@ -30,4 +30,4 @@ Code is [MIT](LICENSE). Questionnaire wording/answer options and product images 
 
 ## Contact
 
-Data controller and questions: Urme, [@urmeo](https://github.com/urmeo). Send identifying or consent details privately using [the reporting process](SECURITY.md).
+Data controller and questions: urme, [@urmeo](https://github.com/urmeo). Send identifying or consent details privately using [the reporting process](SECURITY.md).

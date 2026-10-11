@@ -9,7 +9,7 @@ description = "Sensor review and descriptive analysis of a one-participant sampl
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
-authors = [{ name = "Urme" }]
+authors = [{ name = "urme" }]
 dependencies = [
     "pandas>=2",
     "numpy>=1.23",
