@@ -1,6 +1,6 @@
 {
-  "title": "Sensor: sensor review and single-participant sample",
-  "description": "Review of eleven devices and two software platforms with six CSV resources from one participant. Raw sensor and questionnaire observations cover Session 1; supplied eye summaries cover three sessions. The author reports consent for research and educational sharing. Analysis is descriptive; acquisition, calibration and cross-stream synchronization provenance are missing. CC BY 4.0 covers original observations and authored documentation where rights are held. Code is MIT. Third-party questionnaire wording, answer options, product images and trademarks remain outside that grant; open instrument redistribution permission is unestablished. See NOTICE.md and DATA_ETHICS.md. Metadata alone establishes no deposited record or DOI.",
+  "title": "Sensor: recordings and descriptive analysis from one participant",
+  "description": "Six CSV files from one participant, Python code for descriptive analysis, and historical reviews of eleven devices and two facial analysis tools. Raw sensor readings and questionnaire responses cover Session 1. Supplied eye summaries cover three sessions. The author reports consent for research and educational sharing. Device identity, calibration and cross-stream synchronization remain unverified. CC BY 4.0 covers original observations and authored documentation where rights are held. Code uses MIT. Questionnaire wording, answer options, product images and trademarks retain third-party rights. Permission to redistribute instrument content openly is unestablished. See NOTICE.md and DATA_ETHICS.md. This metadata does not establish a deposited record or DOI.",
   "upload_type": "dataset",
   "access_right": "open",
   "license": "cc-by-4.0",

@@ -1,8 +1,6 @@
 # Data dictionary
 
-**Signals · Clocks · Units · Provenance**
-
-One participant. Raw sensors and questionnaire responses cover Session 1; supplied eye summaries cover three sessions. [Schema](../datapackage.json) defines stored types and constraints. [Rights and corrections](../NOTICE.md) apply to every resource.
+The data comes from one participant. Raw sensor readings and questionnaire responses cover Session 1; supplied eye summaries cover three sessions. The [schema](../datapackage.json) defines stored types and constraints. [Rights and corrections](../NOTICE.md) apply to every resource.
 
 | Resource | Rows | Scope |
 |---|---:|---|
@@ -13,7 +11,26 @@ One participant. Raw sensors and questionnaire responses cover Session 1; suppli
 | `eye_metrics.csv` | 264 | 88 question summaries × 3 sessions |
 | `Psychometric_Test_Results.csv` | 88 | Session 1 item responses |
 
-`sed.csv → legacy gaze runs → descriptive plots`
+## Recording provenance
+
+[RECORDING_PROVENANCE.json](RECORDING_PROVENANCE.json) records each resource's session, observed channels and source SHA-256 hash. It marks acquisition facts unknown where evidence is missing. The package's custom `recordingProvenance` and per-resource `recordingIds` fields link to this manifest.
+
+| Recording | Supplied resources / selectors | Acquisition evidence |
+|---|---|---|
+| `session-1` · 2024-06-13 | `hr`, `ibi`: channels 0–5; `sed`, derived `sed_fix`: channel 0; `eye_metrics`: `Test 01`; `psych` | Device mappings and calibration unknown; summary lineage/aggregation unknown |
+| `session-2` · 2024-06-20 | `eye_metrics`: `Test 02` | Raw streams and acquisition/calibration logs absent; aggregation unknown |
+| `session-3` · 2024-06-24 | `eye_metrics`: `Test 03` | Raw streams and acquisition/calibration logs absent; aggregation unknown |
+
+Dates come from the source calendar fields and do not establish shared clocks. Each `iSensor` identifier is local to its file; matching numbers in HR and IBI do not identify the same physical unit. Summary rows have no channel identifier. Their `source_data` is null, including Session 1, because their relationship to available raw streams has not been reproduced.
+
+Each stream has device, calibration, clock and aggregation records. Metadata states describe the available evidence:
+
+- `unknown` uses null fields and explains what evidence is missing.
+- `not_applicable` is used for sensor calibration of questionnaire responses.
+- `reproduced` records the known historical `sed` → `sed_fix` transformation and parameters. It does not establish how the original file was produced or validate fixation events.
+- `verified` requires recording-specific evidence and identifying details. See [recording requirements](../NOTICE.md#recording-provenance).
+
+Run `python -m scripts.validate_provenance` to check source hashes, exact row coverage, all observed channels, and recording and evidence references. A successful check confirms the file inventory; it does not validate unknown acquisition facts.
 
 ## Clocks
 
@@ -23,9 +40,9 @@ One participant. Raw sensors and questionnaire responses cover Session 1; suppli
 | `eye_metrics` | `Start Time`, `End Time` | Naive; unspecified | Earliest start within each `Test` |
 | `psych` | `Question Start Time`, `Question Answer Time` | Aware; UTC | Earliest questionnaire start |
 
-- Source streams span about 535 seconds. Shared clock readings do not establish synchronization; timezone and acquisition clock mapping are missing.
+- Source streams span about 535 seconds. Matching clock readings do not establish synchronization; timezones and acquisition clock mappings are missing.
 - The schema's `timeZone`, `timestampAwareness`, `timestampFields` and `relativeTimeOrigin` are custom descriptive metadata. Each resource is checked independently.
-- Relative copies remove calendar columns and retain sensitive responses and physiological patterns. See [data ethics](../DATA_ETHICS.md).
+- Copies with relative timestamps remove calendar columns and retain sensitive responses and physiological patterns. See [data ethics](../DATA_ETHICS.md).
 
 ## Heart rate and interval readings
 
@@ -44,7 +61,7 @@ One participant. Raw sensors and questionnaire responses cover Session 1; suppli
 | 0, 1, 2, 4 | Initialization rows without valid HR signal |
 | Interval counts | Channel 5: 1,809; channel 3: 581; four initialization rows |
 
-Repeated/quantized interval readings are not a verified NN or R-R beat sequence. Reliable RMSSD/SDNN cannot be inferred from these samples. Reviewed Polar/Moofit devices do not establish channel identities; HW401 is optical PPG.
+The repeated, quantized interval readings are not a verified NN or R-R beat sequence. They do not support reliable RMSSD or SDNN estimates. Reviewing Polar and Moofit devices does not establish channel identities; HW401 is an optical PPG device.
 
 ## Eye stream: `sed.csv`
 
@@ -67,7 +84,9 @@ The historical filename means “Smart Eye Data”. Recorded device, adapter, sa
 | `pupil` | number | 0–3.88; reported mm, calibration unavailable |
 | `pupilQ` | number | Reported measurement quality, 0–1 |
 
-All-zero head fields have an unknown acquisition cause. `valid_pupil` keeps finite, positive pupil readings and finite quality values with `0.5 < pupilQ <= 1` by default. Its configurable cutoff must be finite and within 0–1. This is a descriptive filter, not a validated anxiety rule.
+The cause of the all-zero head fields is unknown. `valid_pupil` keeps finite, positive pupil readings and finite quality values with `0.5 < pupilQ <= 1` by default. Its configurable cutoff must be finite and within 0–1. This is a descriptive filter, not a validated anxiety rule.
+
+Boolean, datetime/date and timedelta values in either measurement column raise `ValueError` before numeric conversion. This includes values in mixed object columns and temporal `NaT` values. Numeric strings are converted as before. Ordinary missing values (`None`, `pd.NA`, `np.nan`) and nonnumeric strings are excluded.
 
 ## Legacy runs: `sed_fix.csv`
 
@@ -100,7 +119,7 @@ Previously named `HRV.csv`; these are eye summaries. Aggregation code, baseline 
 | `Pupil Dilation Increase` | string | Supplied `Yes`/`No` flag |
 | `Left Blink Rate Increase`, `Right Blink Rate Increase` | string | Supplied `Yes`/`No` flags |
 
-Session 1 has 88 “Yes” pupil flags. Their cause is unknown. Large blink values and all flags remain as supplied; no clinical threshold or silent cleaning is applied. Raw Sessions 2–3 are unavailable, and clock correspondence alone does not reproduce summaries.
+Session 1 has 88 “Yes” pupil flags. Their cause is unknown. Large blink values and all flags remain as supplied; no clinical threshold or silent cleaning is applied. Raw Sessions 2–3 are unavailable. Matching clock readings alone do not reproduce the summaries.
 
 ## Responses: `Psychometric_Test_Results.csv`
 
@@ -113,4 +132,4 @@ Session 1 has 88 “Yes” pupil flags. Their cause is unknown. Large blink valu
 | `Time(s)` | number | Response duration, 2.016–22.737 s |
 | `Question Start Time`, `Question Answer Time` | string | ISO timestamps with UTC offset |
 
-Variant, reverse-keying and aggregate-score provenance are missing. These codes are not validated scale totals. Time fields are checked against `Time(s)` within 0.001 s; longer responses do not establish deliberation, avoidance or anxiety.
+The instrument variant, reverse-keying and aggregate scoring are undocumented. These codes are not validated scale totals. Time fields are checked against `Time(s)` within 0.001 s. Longer responses do not establish deliberation, avoidance or anxiety.

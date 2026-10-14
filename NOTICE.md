@@ -1,7 +1,5 @@
 # Rights and historical review corrections
 
-**Rights · Devices · Methods · History**
-
 ## License scope
 
 | Material | Scope |
@@ -11,7 +9,7 @@
 | Questionnaire wording and answer options | Instrument rights remain; open redistribution permission is unestablished |
 | Product images and trademarks | Respective owners; [image credits](docs/images/CREDITS.md), excluded from the CC BY grant |
 
-[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) permits commercial copyright reuse and preserves separate privacy/personality rights. Research/education are the author's stated consent purposes in [DATA_ETHICS](DATA_ETHICS.md). The repository grants no instrument permission or endorsement.
+[CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) permits commercial copyright reuse. Privacy and personality rights remain separate. The author's stated consent covers research and education; see [data ethics](DATA_ETHICS.md). The repository grants no instrument permissions and implies no endorsement.
 
 | Instrument | Attribution and permission source |
 |---|---|
@@ -20,11 +18,11 @@
 | BFI-10 | Oliver P. John / Berkeley Personality Lab; [research terms](https://www.ocf.berkeley.edu/~johnlab/bfi.html); Rammstedt and John (2007) |
 | FQ | Isaac M. Marks; Marks and Mathews (1979). Confirm permission for the intended use. |
 
-Original item text and response observations are distinct rights-bearing material. Preserve source records; avoid additional publication of instrument wording in examples, wheels or derived outputs. Citation/deposit metadata describes these scopes; it does not establish a Zenodo deposit or DOI.
+Questionnaire wording and recorded responses have separate rights. Preserve the source records, and avoid republishing instrument wording in examples, wheels or derived outputs. Citation and deposit metadata describe these rights; they do not establish a Zenodo deposit or DOI.
 
 ## Historical documents
 
-The seven original PDFs remain unchanged in [docs/reviews](docs/reviews/). They are historical reviews/protocol drafts, not current software contracts or validation results. Corrections below were checked against primary documentation on 6–7 October 2026.
+The seven original PDFs in [docs/reviews](docs/reviews/) are unchanged historical reviews and protocol drafts. They do not define current software behavior or provide validation results. The corrections below were checked against primary documentation on 6–7 October 2026.
 
 | Source document | Correction |
 |---|---|
@@ -49,6 +47,25 @@ The seven original PDFs remain unchanged in [docs/reviews](docs/reviews/). They 
 
 ## Measurement limits
 
-- Literature on [pupillometry](https://doi.org/10.1177/1745691611427305), [arousal and saccades](https://doi.org/10.1016/j.neubiorev.2013.03.011), [task-specific velocity thresholds](https://pubmed.ncbi.nlm.nih.gov/21287116/) and [HRV measurement](https://doi.org/10.1161/01.CIR.93.5.1043) does not validate the old anxiety rules on this one-person sample.
-- Anonymous channel mapping, calibration, summary aggregation/baselines/blink rules and cross-stream clock synchronization are unestablished. Stored item codes have no verified reverse-keying/aggregate-score provenance.
-- Current analysis describes observations and legacy low-movement runs. Repeated interval samples do not establish beat HRV; response times and supplied flags do not establish psychological states.
+- Literature on [pupillometry](https://doi.org/10.1177/1745691611427305), [arousal and saccades](https://doi.org/10.1016/j.neubiorev.2013.03.011), [task-specific velocity thresholds](https://pubmed.ncbi.nlm.nih.gov/21287116/) and [HRV measurement](https://doi.org/10.1161/01.CIR.93.5.1043) does not validate the historical anxiety rules on this one-person sample.
+- Device mappings, calibration and clock synchronization between streams are unknown. Summary aggregation, baseline intervals and blink rules are undocumented. Reverse-keying and aggregate scoring of stored item codes are unverified.
+- The analysis describes observations and historical low-movement runs. Repeated interval samples do not establish beat-level HRV. Response times and supplied flags do not establish psychological states.
+
+## Recording provenance
+
+[RECORDING_PROVENANCE.json](data/RECORDING_PROVENANCE.json) records the SHA-256 hash, session, row selector and observed channels for all six CSVs. Device identity and configuration, adapter and software versions, calibration, clock synchronization and aggregation rules are marked unknown where evidence is missing.
+
+`iSensor` is local to each resource. Matching channel numbers across files do not establish a shared physical device. The historical “Smart Eye Data” name and the hardware reviews do not identify the acquired device either.
+
+Session 1 includes raw streams, responses, supplied eye summaries and a historical derived file. Sessions 2–3 include supplied summaries only; their raw acquisition files are absent. Summary-to-raw linkage is unknown for all three sessions. `sed_fix` is a reproducible transformation of `sed`, not a separate acquisition. Reproducing it does not recover the original software environment or validate fixation events.
+
+For each new recording, retain:
+
+- The acquisition log, channel-to-unit mapping, device model, identifier, firmware and configuration, and adapter and software versions.
+- The calibration procedure, date, outcome and report, plus coordinate units and reference frame.
+- Clock settings and synchronization evidence.
+- Aggregation source files, code version, parameters, windows, quality rules, baselines and blink definitions.
+
+Mark unavailable information `unknown`, with null values and a reason. Use `not_applicable` only when a measurement does not apply, such as sensor calibration for questionnaire responses. A `verified` claim needs identifying details and recording-specific evidence. Catalog specifications and generic reviews are insufficient.
+
+Run `python -m scripts.validate_provenance` to check source hashes, complete and nonoverlapping row/session coverage, channel coverage, metadata states and evidence references. This checks that evidence is available and consistent. It does not establish device identity or calibration accuracy, and a successful check leaves historical unknowns unverified.

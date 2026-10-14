@@ -1,7 +1,7 @@
 cff-version: 1.2.0
-message: "Cite this resource; see NOTICE.md for mixed license scopes and instrument rights."
+message: "Cite this dataset. See NOTICE.md for code, data and third-party rights."
 type: dataset
-title: "Sensor: sensor review and single-participant sample"
+title: "Sensor: recordings and descriptive analysis from one participant"
 version: 0.1.1
 url: "https://github.com/urmeo/Sensor"
 repository-code: "https://github.com/urmeo/Sensor"
@@ -17,12 +17,13 @@ keywords:
   - eye-tracking
   - psychometrics
 abstract: >-
-  Review of eleven devices and two software platforms, with six CSV resources
-  from one participant. Raw sensor and questionnaire observations cover
-  Session 1; supplied eye summaries cover three sessions. Analysis is
-  descriptive, with missing acquisition, calibration and synchronization
-  provenance. Code is MIT; original data observations and authored
-  documentation are CC BY 4.0 where the author holds rights. Questionnaire
-  wording, answer options and product media retain third-party rights;
-  open instrument redistribution permission is unestablished. See NOTICE.md
-  and DATA_ETHICS.md. Metadata alone establishes no deposited record or DOI.
+  Six CSV files from one participant, Python code for descriptive analysis,
+  and historical reviews of eleven devices and two facial analysis tools.
+  Raw sensor readings and questionnaire responses cover Session 1. Supplied
+  eye summaries cover three sessions. Device identity, calibration and
+  cross-stream synchronization remain unverified. Code uses MIT. Original
+  observations and authored documentation use CC BY 4.0 where the author
+  holds rights. Questionnaire wording, answer options and product media
+  retain third-party rights. Permission to redistribute instrument content
+  openly is unestablished. See NOTICE.md and DATA_ETHICS.md. This metadata
+  does not establish a deposited record or DOI.

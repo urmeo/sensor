@@ -1,12 +1,10 @@
-# Image Credits
+# Image credits
 
-The product images in this folder are used to identify the sensors and software
-reviewed in this repository. Each is the property of its respective manufacturer
-or project and is included for **identification and review purposes only**
-(nominative fair use). They are **not** original work of this repository and are
-**explicitly excluded from the CC BY 4.0 license** that covers the repository's
-data and documentation. No affiliation with or endorsement by any listed company
-is implied; all trademarks belong to their respective owners.
+The images identify the sensors and software reviewed in this repository.
+They belong to the manufacturers or projects listed below and are excluded from
+the repository's CC BY 4.0 grant. Their intended use is identification and review.
+All trademarks belong to their respective owners. Their inclusion implies no
+affiliation or endorsement.
 
 | File | Device / software | Rights holder |
 |------|-------------------|---------------|
@@ -24,5 +22,5 @@ is implied; all trademarks belong to their respective owners.
 | `openface.jpg` | OpenFace | OpenFace project (Carnegie Mellon University) |
 | `noldus-facereader.jpg` | Noldus FaceReader | Noldus Information Technology BV |
 
-If you are a rights holder and would like an image removed or re-credited,
-contact the maintainer (see `DATA_ETHICS.md`).
+Rights holders can request removal or corrected credit through the
+[maintainer contact](../../DATA_ETHICS.md#contact).
