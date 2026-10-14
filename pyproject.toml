@@ -5,7 +5,7 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "sensor-anxiety-dataset"
 version = "0.1.1"
-description = "Sensor review and descriptive analysis of a one-participant sample."
+description = "Sensor recordings, descriptive analysis and historical device reviews."
 readme = "README.md"
 requires-python = ">=3.11"
 license = { text = "MIT" }
@@ -20,6 +20,7 @@ dependencies = [
 dev = [
     "pytest>=7.4",
     "nbformat>=5.9",
+    "nbclient>=0.11",
     "nbmake>=1.5",
     "ipykernel>=6.25",
     "ruff>=0.6",
