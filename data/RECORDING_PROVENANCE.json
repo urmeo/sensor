@@ -1,0 +1,568 @@
+{
+  "schema_version": 1,
+  "scope": "Historical inventory of all supplied CSVs and their recording-local channels. Unknown values are explicit, not inferred from the hardware reviews. Session labels describe dataset grouping, not verified clock synchronization or device continuity.",
+  "sources": {
+    "hr": {
+      "path": "data/hr.csv",
+      "sha256": "5c9ae458838927b93b77cc7973a60a769bd8c7a9cc4a3a707d2e239871ea08f5"
+    },
+    "ibi": {
+      "path": "data/ibi.csv",
+      "sha256": "d6a1af2da8536c0416db954bfe6b8b8c2ea4741f64b4c7c9efc1453266d40efe"
+    },
+    "sed": {
+      "path": "data/sed.csv",
+      "sha256": "d8ec7cec34464d8a8e5fb5ed90afdce99eb45086b77bacdf7e44b69fd407e3f9"
+    },
+    "sed_fix": {
+      "path": "data/sed_fix.csv",
+      "sha256": "a6c6aa680dc7f1e7ba64f5155f040ecd881668212283bed7ecb759b6f6a316b2"
+    },
+    "eye_metrics": {
+      "path": "data/eye_metrics.csv",
+      "sha256": "c9880b0567fe9d29bf41614e38175b08b13629933a4e3d7ca8ebe518d00c906f"
+    },
+    "psych": {
+      "path": "data/Psychometric_Test_Results.csv",
+      "sha256": "f038887092541101a521d7ae7016d855e2cc58b1c9ff938a0d6a3311cc8bc0a9"
+    }
+  },
+  "recordings": [
+    {
+      "id": "session-1",
+      "label": "Session 1",
+      "source_date": "2024-06-13",
+      "raw_sensor_data_available": true,
+      "notes": "Raw streams, questionnaire responses and Test 01 eye summaries are supplied for this dataset session. Grouping does not establish common clocks, physical device identity or summary lineage.",
+      "streams": [
+        {
+          "resource": "hr",
+          "kind": "raw_sensor",
+          "selector": null,
+          "channels": [
+            {
+              "iSensor": 0,
+              "device_id": null,
+              "mapping_status": "unknown"
+            },
+            {
+              "iSensor": 1,
+              "device_id": null,
+              "mapping_status": "unknown"
+            },
+            {
+              "iSensor": 2,
+              "device_id": null,
+              "mapping_status": "unknown"
+            },
+            {
+              "iSensor": 3,
+              "device_id": null,
+              "mapping_status": "unknown"
+            },
+            {
+              "iSensor": 4,
+              "device_id": null,
+              "mapping_status": "unknown"
+            },
+            {
+              "iSensor": 5,
+              "device_id": null,
+              "mapping_status": "unknown"
+            }
+          ],
+          "device": {
+            "status": "unknown",
+            "manufacturer": null,
+            "model": null,
+            "unit_id": null,
+            "firmware": null,
+            "configuration": null,
+            "adapter": null,
+            "acquisition_software": null,
+            "acquisition_version": null,
+            "evidence": [],
+            "notes": "No recording-specific acquisition log establishes manufacturer, model, unit, adapter, software or configuration. Channel IDs are local to this resource and do not prove shared devices across files."
+          },
+          "calibration": {
+            "status": "unknown",
+            "procedure": null,
+            "performed_at": null,
+            "outcome": null,
+            "report": null,
+            "units": null,
+            "coordinate_system": null,
+            "evidence": [],
+            "notes": "No calibration procedure, date, outcome or report is available. Reported field labels do not establish calibrated units or coordinate systems."
+          },
+          "aggregation": {
+            "status": "unknown",
+            "software": null,
+            "version": null,
+            "parameters": null,
+            "source_data": null,
+            "window": null,
+            "baseline": null,
+            "blink_rule": null,
+            "quality_filter": null,
+            "evidence": [],
+            "notes": "This file stores exported samples. Pre-export sampling, smoothing, resampling and device-side aggregation are undocumented; no absence of aggregation is assumed."
+          },
+          "clock": {
+            "timestamp_fields": [
+              "datetime"
+            ],
+            "timezone": "unspecified",
+            "synchronization_status": "unknown",
+            "notes": "Stored timestamps and recording-relative offsets are observable; timezone/clock correspondence to other streams and synchronization accuracy are unestablished."
+          }
+        },
+        {
+          "resource": "ibi",
+          "kind": "raw_sensor",
+          "selector": null,
+          "channels": [
+            {
+              "iSensor": 0,
+              "device_id": null,
+              "mapping_status": "unknown"
+            },
+            {
+              "iSensor": 1,
+              "device_id": null,
+              "mapping_status": "unknown"
+            },
+            {
+              "iSensor": 2,
+              "device_id": null,
+              "mapping_status": "unknown"
+            },
+            {
+              "iSensor": 3,
+              "device_id": null,
+              "mapping_status": "unknown"
+            },
+            {
+              "iSensor": 4,
+              "device_id": null,
+              "mapping_status": "unknown"
+            },
+            {
+              "iSensor": 5,
+              "device_id": null,
+              "mapping_status": "unknown"
+            }
+          ],
+          "device": {
+            "status": "unknown",
+            "manufacturer": null,
+            "model": null,
+            "unit_id": null,
+            "firmware": null,
+            "configuration": null,
+            "adapter": null,
+            "acquisition_software": null,
+            "acquisition_version": null,
+            "evidence": [],
+            "notes": "No recording-specific acquisition log establishes manufacturer, model, unit, adapter, software or configuration. Channel IDs are local to this resource and do not prove shared devices across files."
+          },
+          "calibration": {
+            "status": "unknown",
+            "procedure": null,
+            "performed_at": null,
+            "outcome": null,
+            "report": null,
+            "units": null,
+            "coordinate_system": null,
+            "evidence": [],
+            "notes": "No calibration procedure, date, outcome or report is available. Reported field labels do not establish calibrated units or coordinate systems."
+          },
+          "aggregation": {
+            "status": "unknown",
+            "software": null,
+            "version": null,
+            "parameters": null,
+            "source_data": null,
+            "window": null,
+            "baseline": null,
+            "blink_rule": null,
+            "quality_filter": null,
+            "evidence": [],
+            "notes": "This file stores exported samples. Pre-export sampling, smoothing, resampling and device-side aggregation are undocumented; no absence of aggregation is assumed."
+          },
+          "clock": {
+            "timestamp_fields": [
+              "datetime"
+            ],
+            "timezone": "unspecified",
+            "synchronization_status": "unknown",
+            "notes": "Stored timestamps and recording-relative offsets are observable; timezone/clock correspondence to other streams and synchronization accuracy are unestablished."
+          }
+        },
+        {
+          "resource": "sed",
+          "kind": "raw_sensor",
+          "selector": null,
+          "channels": [
+            {
+              "iSensor": 0,
+              "device_id": null,
+              "mapping_status": "unknown"
+            }
+          ],
+          "device": {
+            "status": "unknown",
+            "manufacturer": null,
+            "model": null,
+            "unit_id": null,
+            "firmware": null,
+            "configuration": null,
+            "adapter": null,
+            "acquisition_software": null,
+            "acquisition_version": null,
+            "evidence": [],
+            "notes": "No recording-specific acquisition log establishes manufacturer, model, unit, adapter, software or configuration. Channel IDs are local to this resource and do not prove shared devices across files."
+          },
+          "calibration": {
+            "status": "unknown",
+            "procedure": null,
+            "performed_at": null,
+            "outcome": null,
+            "report": null,
+            "units": null,
+            "coordinate_system": null,
+            "evidence": [],
+            "notes": "No calibration procedure, date, outcome or report is available. Reported field labels do not establish calibrated units or coordinate systems."
+          },
+          "aggregation": {
+            "status": "unknown",
+            "software": null,
+            "version": null,
+            "parameters": null,
+            "source_data": null,
+            "window": null,
+            "baseline": null,
+            "blink_rule": null,
+            "quality_filter": null,
+            "evidence": [],
+            "notes": "This file stores exported samples. Pre-export sampling, smoothing, resampling and device-side aggregation are undocumented; no absence of aggregation is assumed."
+          },
+          "clock": {
+            "timestamp_fields": [
+              "datetime"
+            ],
+            "timezone": "unspecified",
+            "synchronization_status": "unknown",
+            "notes": "Stored timestamps and recording-relative offsets are observable; timezone/clock correspondence to other streams and synchronization accuracy are unestablished."
+          }
+        },
+        {
+          "resource": "sed_fix",
+          "kind": "legacy_derived",
+          "selector": null,
+          "channels": [
+            {
+              "iSensor": 0,
+              "device_id": null,
+              "mapping_status": "unknown"
+            }
+          ],
+          "device": {
+            "status": "unknown",
+            "manufacturer": null,
+            "model": null,
+            "unit_id": null,
+            "firmware": null,
+            "configuration": null,
+            "adapter": null,
+            "acquisition_software": null,
+            "acquisition_version": null,
+            "evidence": [],
+            "notes": "Derived from sed, not a separate acquisition. The source channel 0 device identity remains unknown."
+          },
+          "calibration": {
+            "status": "unknown",
+            "procedure": null,
+            "performed_at": null,
+            "outcome": null,
+            "report": null,
+            "units": null,
+            "coordinate_system": null,
+            "evidence": [],
+            "notes": "Inherits the unverified calibration, coordinate frame and units of sed; derivation provides no calibration evidence."
+          },
+          "aggregation": {
+            "status": "reproduced",
+            "software": "scripts.derive.detect_legacy_runs",
+            "version": "legacy output reproduced from repository revision 6f36a8b4f622b36b71a9dbbf9f0fd8128fa9ccb3",
+            "parameters": {
+              "gaze_displacement_threshold": 0.01,
+              "comparison": "<",
+              "duration": "last reltime minus first reltime in each true run",
+              "numeric_reproduction_atol": 1e-09,
+              "numeric_reproduction_rtol": 0
+            },
+            "source_data": [
+              "sed"
+            ],
+            "window": "consecutive source rows; contiguous true and false runs receive IDs",
+            "baseline": null,
+            "blink_rule": null,
+            "quality_filter": "none; no gap or minimum-duration constraint",
+            "evidence": [
+              {
+                "path": "scripts/derive.py",
+                "description": "Explicit historical reproduction implementation; compare using python -m scripts.derive."
+              },
+              {
+                "path": "tests/test_derive.py",
+                "description": "Source comparison checks reproduced historical output."
+              }
+            ],
+            "notes": "The source columns are identical to sed. This algorithm reproduces supplied flags, including invalid-quality and long-gap behavior. Original acquisition/derivation invocation and software environment are unavailable. Reproduced does not mean scientifically validated fixation events."
+          },
+          "clock": {
+            "timestamp_fields": [
+              "datetime"
+            ],
+            "timezone": "unspecified",
+            "synchronization_status": "unknown",
+            "notes": "Stored timestamps and recording-relative offsets are observable; timezone/clock correspondence to other streams and synchronization accuracy are unestablished."
+          }
+        },
+        {
+          "resource": "eye_metrics",
+          "kind": "summary",
+          "selector": {
+            "Test": "Test 01"
+          },
+          "channels": [],
+          "device": {
+            "status": "unknown",
+            "manufacturer": null,
+            "model": null,
+            "unit_id": null,
+            "firmware": null,
+            "configuration": null,
+            "adapter": null,
+            "acquisition_software": null,
+            "acquisition_version": null,
+            "evidence": [],
+            "notes": "No recording-specific device or channel map accompanies these supplied summaries. Raw acquisition files for Sessions 2 and 3 are absent; even Session 1 source linkage to sed is unverified."
+          },
+          "calibration": {
+            "status": "unknown",
+            "procedure": null,
+            "performed_at": null,
+            "outcome": null,
+            "report": null,
+            "units": null,
+            "coordinate_system": null,
+            "evidence": [],
+            "notes": "Calibrated pupil scale and eye-openness/blink calibration are unavailable; reported mm and blinks/min are supplied labels."
+          },
+          "aggregation": {
+            "status": "unknown",
+            "software": null,
+            "version": null,
+            "parameters": null,
+            "source_data": null,
+            "window": null,
+            "baseline": null,
+            "blink_rule": null,
+            "quality_filter": null,
+            "evidence": [],
+            "notes": "Original aggregation code/version, source file linkage, window boundaries, quality exclusions, pupil baseline and blink definition are unavailable. Supplied question boundaries and increase flags do not establish these rules."
+          },
+          "clock": {
+            "timestamp_fields": [
+              "Start Time",
+              "End Time"
+            ],
+            "timezone": "unspecified",
+            "synchronization_status": "unknown",
+            "notes": "Stored timestamps and recording-relative offsets are observable; timezone/clock correspondence to other streams and synchronization accuracy are unestablished."
+          }
+        },
+        {
+          "resource": "psych",
+          "kind": "questionnaire",
+          "selector": null,
+          "channels": [],
+          "device": {
+            "status": "unknown",
+            "manufacturer": null,
+            "model": null,
+            "unit_id": null,
+            "firmware": null,
+            "configuration": null,
+            "adapter": null,
+            "acquisition_software": null,
+            "acquisition_version": null,
+            "evidence": [],
+            "notes": "The questionnaire export does not identify the capture computer, application, version or input device."
+          },
+          "calibration": {
+            "status": "not_applicable",
+            "procedure": null,
+            "performed_at": null,
+            "outcome": null,
+            "report": null,
+            "units": null,
+            "coordinate_system": null,
+            "evidence": [],
+            "notes": "This resource records questionnaire responses, not calibrated sensor measurements. Instrument/scoring provenance is a separate aggregation unknown."
+          },
+          "aggregation": {
+            "status": "unknown",
+            "software": null,
+            "version": null,
+            "parameters": null,
+            "source_data": null,
+            "window": null,
+            "baseline": null,
+            "blink_rule": null,
+            "quality_filter": null,
+            "evidence": [],
+            "notes": "Stored item codes and response times are supplied observations. Instrument variant, keying/reverse-keying, scoring software/version and aggregate scale calculation are unverified."
+          },
+          "clock": {
+            "timestamp_fields": [
+              "Question Start Time",
+              "Question Answer Time"
+            ],
+            "timezone": "UTC",
+            "synchronization_status": "unknown",
+            "notes": "Stored timestamps and recording-relative offsets are observable; timezone/clock correspondence to other streams and synchronization accuracy are unestablished."
+          }
+        }
+      ]
+    },
+    {
+      "id": "session-2",
+      "label": "Session 2",
+      "source_date": "2024-06-20",
+      "raw_sensor_data_available": false,
+      "notes": "Only Test 02 eye summaries are supplied. Raw sensor files, acquisition logs, calibration reports and aggregation code are unavailable.",
+      "streams": [
+        {
+          "resource": "eye_metrics",
+          "kind": "summary",
+          "selector": {
+            "Test": "Test 02"
+          },
+          "channels": [],
+          "device": {
+            "status": "unknown",
+            "manufacturer": null,
+            "model": null,
+            "unit_id": null,
+            "firmware": null,
+            "configuration": null,
+            "adapter": null,
+            "acquisition_software": null,
+            "acquisition_version": null,
+            "evidence": [],
+            "notes": "No recording-specific device or channel map accompanies these supplied summaries. Raw acquisition files for Sessions 2 and 3 are absent; even Session 1 source linkage to sed is unverified."
+          },
+          "calibration": {
+            "status": "unknown",
+            "procedure": null,
+            "performed_at": null,
+            "outcome": null,
+            "report": null,
+            "units": null,
+            "coordinate_system": null,
+            "evidence": [],
+            "notes": "Calibrated pupil scale and eye-openness/blink calibration are unavailable; reported mm and blinks/min are supplied labels."
+          },
+          "aggregation": {
+            "status": "unknown",
+            "software": null,
+            "version": null,
+            "parameters": null,
+            "source_data": null,
+            "window": null,
+            "baseline": null,
+            "blink_rule": null,
+            "quality_filter": null,
+            "evidence": [],
+            "notes": "Original aggregation code/version, source file linkage, window boundaries, quality exclusions, pupil baseline and blink definition are unavailable. Supplied question boundaries and increase flags do not establish these rules."
+          },
+          "clock": {
+            "timestamp_fields": [
+              "Start Time",
+              "End Time"
+            ],
+            "timezone": "unspecified",
+            "synchronization_status": "unknown",
+            "notes": "Stored timestamps and recording-relative offsets are observable; timezone/clock correspondence to other streams and synchronization accuracy are unestablished."
+          }
+        }
+      ]
+    },
+    {
+      "id": "session-3",
+      "label": "Session 3",
+      "source_date": "2024-06-24",
+      "raw_sensor_data_available": false,
+      "notes": "Only Test 03 eye summaries are supplied. Raw sensor files, acquisition logs, calibration reports and aggregation code are unavailable.",
+      "streams": [
+        {
+          "resource": "eye_metrics",
+          "kind": "summary",
+          "selector": {
+            "Test": "Test 03"
+          },
+          "channels": [],
+          "device": {
+            "status": "unknown",
+            "manufacturer": null,
+            "model": null,
+            "unit_id": null,
+            "firmware": null,
+            "configuration": null,
+            "adapter": null,
+            "acquisition_software": null,
+            "acquisition_version": null,
+            "evidence": [],
+            "notes": "No recording-specific device or channel map accompanies these supplied summaries. Raw acquisition files for Sessions 2 and 3 are absent; even Session 1 source linkage to sed is unverified."
+          },
+          "calibration": {
+            "status": "unknown",
+            "procedure": null,
+            "performed_at": null,
+            "outcome": null,
+            "report": null,
+            "units": null,
+            "coordinate_system": null,
+            "evidence": [],
+            "notes": "Calibrated pupil scale and eye-openness/blink calibration are unavailable; reported mm and blinks/min are supplied labels."
+          },
+          "aggregation": {
+            "status": "unknown",
+            "software": null,
+            "version": null,
+            "parameters": null,
+            "source_data": null,
+            "window": null,
+            "baseline": null,
+            "blink_rule": null,
+            "quality_filter": null,
+            "evidence": [],
+            "notes": "Original aggregation code/version, source file linkage, window boundaries, quality exclusions, pupil baseline and blink definition are unavailable. Supplied question boundaries and increase flags do not establish these rules."
+          },
+          "clock": {
+            "timestamp_fields": [
+              "Start Time",
+              "End Time"
+            ],
+            "timezone": "unspecified",
+            "synchronization_status": "unknown",
+            "notes": "Stored timestamps and recording-relative offsets are observable; timezone/clock correspondence to other streams and synchronization accuracy are unestablished."
+          }
+        }
+      ]
+    }
+  ]
+}

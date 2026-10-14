@@ -75,7 +75,10 @@
       "timestampFields": [
         "datetime"
       ],
-      "relativeTimeOrigin": "Existing reltime from recording start, retained in relative-time copies."
+      "relativeTimeOrigin": "Existing reltime from recording start, retained in relative-time copies.",
+      "recordingIds": [
+        "session-1"
+      ]
     },
     {
       "name": "ibi",
@@ -131,7 +134,10 @@
       "timestampFields": [
         "datetime"
       ],
-      "relativeTimeOrigin": "Existing reltime from recording start, retained in relative-time copies."
+      "relativeTimeOrigin": "Existing reltime from recording start, retained in relative-time copies.",
+      "recordingIds": [
+        "session-1"
+      ]
     },
     {
       "name": "sed",
@@ -387,7 +393,10 @@
       "timestampFields": [
         "datetime"
       ],
-      "relativeTimeOrigin": "Existing reltime from recording start, retained in relative-time copies."
+      "relativeTimeOrigin": "Existing reltime from recording start, retained in relative-time copies.",
+      "recordingIds": [
+        "session-1"
+      ]
     },
     {
       "name": "sed_fix",
@@ -676,7 +685,10 @@
       "timestampFields": [
         "datetime"
       ],
-      "relativeTimeOrigin": "Existing reltime from recording start, retained in relative-time copies."
+      "relativeTimeOrigin": "Existing reltime from recording start, retained in relative-time copies.",
+      "recordingIds": [
+        "session-1"
+      ]
     },
     {
       "name": "eye_metrics",
@@ -816,7 +828,12 @@
         "Start Time",
         "End Time"
       ],
-      "relativeTimeOrigin": "Earliest Start Time within each Test session when creating a relative-time copy."
+      "relativeTimeOrigin": "Earliest Start Time within each Test session when creating a relative-time copy.",
+      "recordingIds": [
+        "session-1",
+        "session-2",
+        "session-3"
+      ]
     },
     {
       "name": "psych",
@@ -902,10 +919,14 @@
         "Question Start Time",
         "Question Answer Time"
       ],
-      "relativeTimeOrigin": "Earliest Question Start Time in the questionnaire when creating a relative-time copy."
+      "relativeTimeOrigin": "Earliest Question Start Time in the questionnaire when creating a relative-time copy.",
+      "recordingIds": [
+        "session-1"
+      ]
     }
   ],
   "licenseScope": "CC BY 4.0 applies to original data observations and authored documentation where the author holds rights. Third-party questionnaire wording and answer options, product images and trademarks remain outside that grant; redistribution permissions are not established. Source code is MIT. See NOTICE.md.",
   "rightsNotice": "NOTICE.md",
-  "clockSynchronization": "No shared timezone or cross-resource synchronization has been established."
+  "clockSynchronization": "No shared timezone or cross-resource synchronization has been established.",
+  "recordingProvenance": "data/RECORDING_PROVENANCE.json"
 }
