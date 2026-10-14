@@ -1,0 +1,81 @@
+{
+  "schema": "sensor.figure-provenance/v1",
+  "algorithm": "sensor.notebook-png-export/v1",
+  "implementation": {
+    "path": "scripts/export_figures.py",
+    "sha256": "bdd382a27683eb7b5ad55ccd678ae1481d2c22dfa808c79208209d15cea2a4fa"
+  },
+  "notebook": {
+    "path": "notebooks/explore_data.ipynb",
+    "sha256": "c9f3226c73dd135cf585620344509ec559ad50128bddf8fcfad66f894e373861"
+  },
+  "analysis": {
+    "path": "sensor_data.py",
+    "sha256": "d07f666d21c36681714decbc0f1357177a3d3b4414667b60722d8effbc0d7d53"
+  },
+  "source_csvs": {
+    "hr": {
+      "path": "data/hr.csv",
+      "sha256": "5c9ae458838927b93b77cc7973a60a769bd8c7a9cc4a3a707d2e239871ea08f5"
+    },
+    "ibi": {
+      "path": "data/ibi.csv",
+      "sha256": "d6a1af2da8536c0416db954bfe6b8b8c2ea4741f64b4c7c9efc1453266d40efe"
+    },
+    "sed": {
+      "path": "data/sed.csv",
+      "sha256": "d8ec7cec34464d8a8e5fb5ed90afdce99eb45086b77bacdf7e44b69fd407e3f9"
+    },
+    "sed_fix": {
+      "path": "data/sed_fix.csv",
+      "sha256": "a6c6aa680dc7f1e7ba64f5155f040ecd881668212283bed7ecb759b6f6a316b2"
+    },
+    "eye_metrics": {
+      "path": "data/eye_metrics.csv",
+      "sha256": "c9880b0567fe9d29bf41614e38175b08b13629933a4e3d7ca8ebe518d00c906f"
+    },
+    "psych": {
+      "path": "data/Psychometric_Test_Results.csv",
+      "sha256": "f038887092541101a521d7ae7016d855e2cc58b1c9ff938a0d6a3311cc8bc0a9"
+    }
+  },
+  "execution": {
+    "kernel": "python3",
+    "matplotlib_backend": "module://matplotlib_inline.backend_inline"
+  },
+  "inputs_unchanged": true,
+  "figures": [
+    {
+      "path": "01_heart_rate.png",
+      "sha256": "cd074bed1a3e9a0b27ec3475be35e38102d1bd9b0b63081f04ebf6eff17bb3df"
+    },
+    {
+      "path": "02_pupil_readings.png",
+      "sha256": "0d9352027f40bef076158e84a7b9627505f72e64f5da84ffa5ecd86036571f7d"
+    },
+    {
+      "path": "03_legacy_run_durations.png",
+      "sha256": "c16c73c875b4d8b24c055e102551fc6f45b4b8c82a8cda05ed6517578f6d6a00"
+    },
+    {
+      "path": "04_interval_variation.png",
+      "sha256": "50f385fb7dd3f9a0a9cca4d07d9ef30a6ecea727d02353afb4acbc71b73f4522"
+    },
+    {
+      "path": "05_pupil_summaries.png",
+      "sha256": "322885a6046c711426975d6c7f498ab6f68aa8f88d98954757a74030ec226160"
+    },
+    {
+      "path": "06_response_times.png",
+      "sha256": "35ccced27d1c8823475b1f07b81b6adb9c196627cef746e85a8f53440fa24b81"
+    }
+  ],
+  "scope": "Descriptive notebook figures from one participant; PNG outputs only.",
+  "limits": [
+    "Device mappings, calibration, coordinate units and clock alignment are unverified.",
+    "Legacy low-movement runs retain quality/gap defects and are not validated fixations.",
+    "Repeated interval samples are not a verified beat sequence or measured cardiac HRV.",
+    "Supplied eye-summary aggregation, baseline intervals and blink rules are unavailable.",
+    "Response times do not establish psychological states or diagnostic results."
+  ]
+}
