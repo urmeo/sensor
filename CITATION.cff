@@ -3,8 +3,8 @@ message: "Cite this dataset. See NOTICE.md for code, data and third-party rights
 type: dataset
 title: "Sensor: recordings and descriptive analysis from one participant"
 version: 0.1.1
-url: "https://github.com/urmeo/Sensor"
-repository-code: "https://github.com/urmeo/Sensor"
+url: "https://github.com/urmeo/sensor"
+repository-code: "https://github.com/urmeo/sensor"
 license:
   - MIT
   - CC-BY-4.0
